@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section for information thats not visible !-->
+<head>
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Author of the web page -->
+    <meta name="author" content="Bayarbat" />
+    <!-- Link external CSS file to style web page !-->
+    <link rel="stylesheet" href="main.css">
+    <!-- Link external JS file !-->
+    <script src="script.js" defer></script>
+    <!-- Link third party font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Jedi Masters | Contact</title>
+</head>
+
+<!-- Body section contains all visible content and information !-->
+<body> 
+    <!-- Header thats common for every subsite. Contains Star Wars logo, navigation links to subsites and hamburger menu for mobile!-->
+    <header>
+        <section class="header">
+            <!-- Star Wars Logo section !--> 
+            <div class="nav-logo">
+              <!-- Pressing on it hyperlinks to home page!-->
+                <a href="index.html">
+                    <img id="site-logo" src="asset/star-wars-logo.png" alt="">
+                </a>
+            </div>
+            <!-- Navigation link section !-->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">Current News</a></li>
+                    <li><a href="movies.html">Mainline Movies</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <!-- Section for scroll to up button !-->
+            <nav>
+                <!-- Icon from font awesome library !-->
+                <button class="scroll-up">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+            <!-- Section for hamburger menu !-->
+            <nav class="hamburger">
+              <i class="fa-solid fa-bars"></i>
+            </nav>
+        </section>
+    </header>
+    <!-- Main section unique for contact site -->
+    <main class="no-overflow">
+      <!-- Division for background stars that cover entire subsite !-->
+      <div class="hero">
+        <!-- Header title for the subsite !-->
+        <section class="section-header">
+            <!-- Header for Contact-->
+            <h2>
+                Contacts 
+            </h2>
+            <!-- Subheader for more information !-->
+            <p>
+              The best way to get more informations<br>
+              about our website or any of Star War topics
+            </p>
+        </section>
+        <!-- Main container for the contents !-->
+        <section class="contact-container">
+          <!-- Section for message board !-->
+            <div class="contacts-email">
+
+                <h3>
+                    Send us a message
+                </h3>
+                <!-- Section to take users message, name, and email !-->
+                <form>
+                  <input type="text" placeholder="Your Name*" required>
+                  <input type="text" placeholder="Email" required>
+                  <textarea name="Message" placeholder="Message" required></textarea>
+                  <button id="email-send">Send</button>
+                </form>
+            </div>
+            <!-- Section for contacts list !-->
+            <div class="contacts-list">
+              <!-- Section subheader for contacts !-->
+              <h3>
+                Best way to reach us
+              </h3>
+              <!-- List for contacts !-->
+              <ul>
+                <!-- Imported image from fontawesome and address !-->
+                <li>
+                  <h4>
+                    <i class="fa-solid fa-house"></i>
+                    Address
+                  </h4>
+                  <p>
+                    3051 Musgrave Street, Oklahoma 73018<br>
+                    United States
+                  </p>
+                </li>
+                <!-- Imported image from fontawesome and email account for reaching out !-->
+                <li>
+                  <h4>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email
+                  </h4>
+                  <p>
+                    contactus@jedimasters.com
+                  </p>
+                </li>
+                <!-- Imported image from fontawesome and phonenumber !-->
+                <li>
+                  <h4>
+                    <i class="fa-solid fa-phone"></i>
+                    Telephone
+                  </h4>
+                  <p>
+                    +1 (624) 384-2036
+                  </p>
+                </li>
+              </ul>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <!-- Footer common for every page. Contains website information and social media links !-->
+    <footer>
+        <!-- Container for every footer item !-->
+        <div class="footer-items">
+            <!-- Container for left side of the footer that contains name, year, and addresses !-->
+            <div class="left">
+                 <h4>Jedi Masters</h4>
+                 <p>Star Wars Fan Magazine</p>
+                 <p>2022; Jedi Masters</p>
+                 <p>Address: 3051 Musgrave Street, Oklahoma 73018</p>
+                 <p>Email: contactus@jedimasters.com</p>
+                 <p>Telephone: +1 (624) 384-2036</p>
+            </div>
+            <!-- Container for right side of the footer that contains social media links !-->
+            <div class="right"> 
+                <nav>
+                    <ul id="socialMediaLinks">
+                        <!-- Link to twitter !-->
+                      <li>
+                        <a href="https://www.twitter.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Twitter</title>
+                            <use xlink:href="asset/twitter.svg#twitter-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to instragram !-->
+                      <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Instagram</title>
+                            <use
+                              xlink:href="asset/instagram-02.svg#instagram-logo"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to facebook !-->
+                      <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Facebook</title>
+                            <use xlink:href="asset/facebook.svg#facebook-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+      </footer>
+</body>

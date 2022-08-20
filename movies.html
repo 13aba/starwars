@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section for information thats not visible !-->
+<head>
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Author of the web page -->
+    <meta name="author" content="Bayarbat" />
+    <!-- Link external CSS file to style web page !-->
+    <link rel="stylesheet" href="main.css">
+    <!-- Link external JS file !-->
+    <script src="script.js" defer></script>
+    <!-- Link third party font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Jedi Masters | Movies</title>
+</head>
+
+<!-- Body section contains all visible content and information !-->
+<body> 
+    <!-- Header thats common for every subsite. Contains Star Wars logo, navigation links to subsites and hamburger menu for mobile!-->
+    <header>
+        <section class="header">
+            <!-- Star Wars Logo section !--> 
+            <div class="nav-logo">
+                <a href="movies.html">
+                    <img id="site-logo" src="asset/star-wars-logo.png" alt="">
+                </a>
+            </div>
+            <!-- Navigation link section !-->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">Current News</a></li>
+                    <li><a href="movies.html">Mainline Movies</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <!-- Section for scroll to up button !-->
+            <nav>
+                <!-- Icon from font awesome library !-->
+                <button class="scroll-up">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+            <!-- Section for hamburger menu !-->
+            <nav class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+              </nav>
+        </section>
+    </header>
+    <!-- Main section unique to movies.html !-->
+    <main class="no-overflow">
+        <!-- Division for background stars that cover entire subsite !-->
+        <div class="hero">
+            <!-- Header title for the subsite !-->
+            <section class="section-header">
+                <!-- Header for Movies -->
+                <h2>
+                    Mainline Movies
+                </h2>
+                <p>
+                    Original trilogy, Prequel trilogy, and Sequel trilogy
+                </p>
+            </section>
+            <!-- Container for all of the movies !-->
+            <div class="movies">
+                <!-- Container for the 4th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner right-banner">
+                    <img src="asset/episode4.png">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: A New Hope (Episode IV)</h3>
+                        <p>
+                            Princess Leia gets abducted by the insidious Darth Vader. 
+                            Luke Skywalker then teams up with a Jedi Knight, 
+                            a pilot and two droids to free her and to save the galaxy from the violent Galactic Empire. 
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=vZ734NWnAHA&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 5th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner left-banner">
+                    <img src="asset/episode5.jpg">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: The Empire Strikes Back (Episode V)</h3>
+                        <p>
+                            Darth Vader is adamant about turning Luke Skywalker to the dark side. 
+                            Master Yoda trains Luke to become a Jedi Knight while his friends try to 
+                            fend off the Imperial fleet.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=JNwNXF9Y6kY&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 6th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner right-banner">
+                    <img src="asset/episode6.png">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: Return of the Jedi (Episode VI)</h3>
+                        <p>
+                            Luke Skywalker attempts to bring his father back to the light side of the Force. 
+                            At the same time, the rebels hatch a plan to destroy the second Death Star.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=7L8p7_SLzvU&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 1st episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner left-banner">
+                    <img src="asset/episode1.png">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: The Phantom Menace (Episode I)</h3>
+                        <p>
+                            Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi set out to stop the Trade Federation 
+                            from invading Naboo. While travelling, they come across a gifted boy, Anakin, and 
+                            learn that the Sith have returned.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=bD7bpG-zDJQ&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 2nd episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner right-banner">
+                    <img src="asset/episode2.png">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: Attack of the Clones (Episode II)</h3>
+                        <p>
+                            While pursuing an assassin, Obi Wan uncovers a sinister plot to destroy the Republic. 
+                            With the fate of the galaxy hanging in the balance, the Jedi must defend the galaxy 
+                            against the evil Sith.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=gYbW1F_c9eM&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 3rd episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner left-banner">
+                    <img src="asset/episode3.png">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: Revenge of the Sith (Episode III)</h3>
+                        <p>
+                            Anakin joins forces with Obi-Wan and sets Palpatine free from the evil clutches of Count Doku. 
+                            However, he falls prey to Palpatine and the Jedis' mind games and gives into temptation.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=5UnjrG_N8hU&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 7th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner right-banner">
+                    <img src="asset/episode7.jpg">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: The Force Awakens (Episode VII)</h3>
+                        <p>
+                            A new order threatens to destroy the New Republic. 
+                            Finn, Rey and Poe, backed by the Resistance and the Republic, 
+                            must find a way to stop them and find Luke, the last surviving Jedi.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=sGbxmsDFVnE&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 8th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner left-banner">
+                    <img src="asset/episode8.jpg">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: The Last Jedi (Episode VIII)</h3>
+                        <p>
+                            Concerned about how strong she is, Luke Skywalker guides Rey as she trains and develops 
+                            her powers in hopes of assisting the Resistance in their fight against the First Order.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=Q0CbN8sfihY&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+                <!-- Container for the 9th episode. Contains poster image, title, and synopsis !-->
+                <div class="movie-banner right-banner">
+                    <img src="asset/episode9.jpg">
+                    <div class="detail">
+                        <h3 class="title">Star Wars: The Rise of Skywalker (Episode IX)</h3>
+                        <p>
+                            The revival of Emperor Palpatine resurrects the battle between the Resistance 
+                            and the First Order while the Jedi's legendary conflict with the Sith Lord comes 
+                            to a head.
+                        </p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=8Qn_spdM5Zg&ab_channel=StarWars">Trailer</a>
+                    <a href="https://www.disneyplus.com">Watch now</a>
+                </div>
+            </div>   
+        </div>
+    </main>
+    <!-- Footer thats common for all subsites. Contains name, address and links to social media !-->
+    <footer>
+        <!-- Container for every footer item !-->
+        <div class="footer-items">
+            <!-- Container for left side of the footer that contains name, year, and addresses !-->
+            <div class="left">
+                 <h4>Jedi Masters</h4>
+                 <p>Star Wars Fan Magazine</p>
+                 <p>2022; Jedi Masters</p>
+                 <p>Address: 3051 Musgrave Street, Oklahoma 73018</p>
+                 <p>Email: contactus@jedimasters.com</p>
+                 <p>Telephone: +1 (624) 384-2036</p>
+            </div>
+            <!-- Container for right side of the footer that contains social media links !-->
+            <div class="right"> 
+                <nav>
+                    <ul id="socialMediaLinks">
+                        <!-- Link to twitter !-->
+                      <li>
+                        <a href="https://www.twitter.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Twitter</title>
+                            <use xlink:href="asset/twitter.svg#twitter-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to instragram !-->
+                      <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Instagram</title>
+                            <use
+                              xlink:href="asset/instagram-02.svg#instagram-logo"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to facebook !-->
+                      <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Facebook</title>
+                            <use xlink:href="asset/facebook.svg#facebook-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+      </footer>
+</body>

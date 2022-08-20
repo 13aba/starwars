@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head section for information thats not visible !-->
+<head>
+    <meta charset="UTF-8">
+    <!-- Informs device to set viewport to its own width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Author of the web page -->
+    <meta name="author" content="Bayarbat" />
+    <!-- Link external CSS file to style web page !-->
+    <link rel="stylesheet" href="main.css">
+    <!-- Link external JS file !-->
+    <script src="script.js" defer></script>
+    <!-- Link third party font families !-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inform user of current page within site structure: shown on web page's tab -->
+    <title>Jedi Masters | Home</title>
+</head>
+
+<!-- Body section contains all visible content and information !-->
+<body> 
+    <!-- Header thats common for every subsite. Contains Star Wars logo, navigation links to subsites and hamburger menu for mobile!-->
+    <header>
+        <section class="header">
+            <!-- Star Wars Logo section !--> 
+            <div class="nav-logo">
+                <a href="movies.html">
+                    <img id="site-logo" src="asset/star-wars-logo.png" alt="">
+                </a>
+            </div>
+            <!-- Navigation link section !-->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">Current News</a></li>
+                    <li><a href="movies.html">Mainline Movies</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <!-- Section for scroll to up button !-->
+            <nav>
+                <!-- Icon from font awesome library !-->
+                <button class="scroll-up">
+                    <i class="fa fa-chevron-up"></i>
+                </button>
+            </nav>
+            <!-- Section for hamburger menu !-->
+            <nav class="hamburger">
+              <i class="fa-solid fa-bars"></i>
+            </nav>
+        </section>
+    </header>
+    <!-- Main content unique to home page !-->
+    <main class="no-overflow">
+      <!-- Division for background stars !-->
+        <div class="hero">
+          <!-- Home page header !-->
+          <section class="section-header">
+            <h2>
+                    Home
+            </h2>
+            <!-- Subheader more detail !-->
+            <p>
+                  Welcome to Star Wars fan magazine
+            </p>
+          </section>
+
+          <!--  Content divider for header and content !-->
+          <div class="divider">
+            <div class="divider-line">
+
+            </div>
+              <h2>
+                  Featured News
+              </h2>
+            <div class="divider-line">
+              
+            </div>  
+          </div>
+          <!-- Main content for home page !-->
+          <section class="home-news">
+              <!-- Featured article !-->
+              <article class="featured">
+                <!-- Header for article !-->
+                <h3>
+                  Star Wars Jedi Survivors announced
+                </h3>
+                <!-- Detail for featured article about new Star Wars game !-->
+                <p> Widely popular Star Wars Jedi Fallen Order is getting sequel. Last week Electronic Arts 
+                    announced that they are developing the next advventure for our favorite teenager jedi. According
+                    to EA game will release in some time around 2023! While waiting for it check out the trailer. 
+                </p>
+                <!-- Embeded youtube video for trailer !-->
+                <iframe id="youtube-trailer" 
+                class="youtube-player" type="text/html"
+                  src="https://www.youtube.com/embed/4HLDaBGdnLc">
+              </iframe>
+              </article>
+              <!-- Article about star wars rogue ones re-release with link to news page !-->
+              <article class="news">
+                <img src="asset/star-wars-re-release.jpg" alt="">
+                <h3>
+                  Star Wars Rogue One gets HISTORICAL re-release 
+                </h3>
+                <p> Upcoming spin-off Andor is set to expand the story of Rebellions.
+                  To promote the new Disney+ series Lucas Films will re-release
+                  Star Wars Rogue One in theaters. Rogue One's return to theaters
+                  marks the first time that Disney is re-releasing a movie to promote an upcoming Disney+ series.
+                </p>
+                <p class="news-author"> By: Santino Enriquez <br> 
+                  August 15 2022 
+                </p>
+                <a href="news.html#star-wars-rogue">Read More</a>
+              </article>
+              <!-- Article about star wars reveletion with link to proper section of news page  !-->
+              <article class="news">
+                  <img src="asset/star-wars-reveletion.jpg" alt="">
+                  <h3>
+                    Marvel's Star Wars Revelations will premiere November 
+                  </h3>
+                  <p> One shot coming to Netflix will flow Dark Vader as he seeks out The Eye of Webbish Bog on Mustafar,
+                      a mysterious creature strong with the Force. Producer promises to deliver exciting new story without
+                      interfering with established plots. 
+                  </p>
+                  <p class="news-author"> By: Tobias Meyers <br> 
+                    August 8 2022 
+                  </p>
+                  <a href="news.html#star-wars-reveletion">Read More</a>
+              </article>
+              <!-- Article about Obi wan series with hyperink to proper section of news page !-->
+              <article class="news">
+                  <img src="asset/obi-wan-series.jpg" alt="">
+                  <h3>
+                      Obi Wan Kenobi might not get second season
+                  </h3>
+                  <p> While the actors are all in on “Obi-Wan” Season 2, the show's creative team is acting a bit more hesitant. 
+                      Producer and director says :“For this one, we really did conceive it to be a limited series.
+                      It really is one big story with a beginning, middle and end. 
+                  </p>
+                  <p class="news-author"> By: Kien Cresswell <br> 
+                      July 18 2022 
+                  </p>
+                  <a href="news.html#star-wars-obiwan">Read More</a>
+              </article>
+          </section>
+          <!-- Content divider between news and frequently asked questions !-->
+          <div class="divider">
+            <div class="divider-line"> 
+            </div>
+              <h2>
+                  FAQ
+              </h2>
+            <div class="divider-line">
+            </div>  
+          </div>
+          <!-- First question of faq !-->
+          <section class="faq">
+            <!-- Question and imported icon from font awesome !-->
+            <div class="question">
+                <h2>How to send suggestion for the website?</h2>
+                <i class="fa-solid fa-square-caret-down"></i>
+            </div>
+            <!-- Answer that will pop up when clicked !-->
+            <div class="answer">
+                <p>
+                    This website is a passion project therefore it will updated as frequent as possible. 
+                    If you have any suggestion for improvement, please use the 
+                    <a href="contact.html">Contact Us</a> page to send message
+                </p>
+            </div>
+          </section>
+           <!-- Second question of faq !-->
+          <section class="faq">
+            <!-- Question and imported icon from font awesome !-->
+              <div class="question">
+                  <h2>Where can I watch the movies?</h2>
+                  <i class="fa-solid fa-square-caret-down"></i>
+              </div>
+               <!-- Answer that will pop up when clicked !-->
+              <div class="answer">
+                  <p>You can get more information on the movies
+                  <a href="movies.html">here</a>
+                  </p>
+              </div>
+          </section>
+             <!-- Third question of faq  !-->
+          <section class="faq">
+            <!-- Question and imported icon from font awesome !-->
+            <div class="question">
+                <h2>What does "May the force be with you" mean?</h2>
+                <i class="fa-solid fa-square-caret-down"></i>
+            </div>
+             <!-- Answer that will pop up when clicked !-->
+            <div class="answer">
+                <p>
+                  'May the Force be with you' is a phrase used to wish an individual or group good luck or good 
+                  will. The speaker is saying that they wish the Force to work in favour of the addressee. 
+                  It was often used as people parted ways, or in the face of an upcoming challenge.
+                </p>
+            </div>
+          </section>
+        </div> 
+    </main>
+     <!-- Footer section thats common for every page. Contains website information and social media links !-->
+    <footer>
+        <!-- Container for every footer item !-->
+        <div class="footer-items">
+            <!-- Container for left side of the footer that contains name, year, and addresses !-->
+            <div class="left">
+                 <h4>Jedi Masters</h4>
+                 <p>Star Wars Fan Magazine</p>
+                 <p>2022; Jedi Masters</p>
+                 <p>Address: 3051 Musgrave Street, Oklahoma 73018</p>
+                 <p>Email: contactus@jedimasters.com</p>
+                 <p>Telephone: +1 (624) 384-2036</p>
+            </div>
+            <!-- Container for right side of the footer that contains social media links !-->
+            <div class="right"> 
+                <nav>
+                    <ul id="socialMediaLinks">
+                        <!-- Link to twitter !-->
+                      <li>
+                        <a href="https://www.twitter.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Twitter</title>
+                            <use xlink:href="asset/twitter.svg#twitter-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to instragram !-->
+                      <li>
+                        <a href="https://www.instagram.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Instagram</title>
+                            <use
+                              xlink:href="asset/instagram-02.svg#instagram-logo"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <!-- Link to facebook !-->
+                      <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                          <svg role="img">
+                            <title>Follow us on Facebook</title>
+                            <use xlink:href="asset/facebook.svg#facebook-logo" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+        </div>
+      </footer>
+</body>

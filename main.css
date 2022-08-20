@@ -1,0 +1,832 @@
+/* No margin, padding, and smooth scroll for every page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/* Declare global variables that will used frequently */
+:root {
+    --nav-color: #070606;
+    --background-color: #4a4747;
+    --highlighter-color: #ebc109;
+    --hover-color: #fe5a02;
+    --text-color: #eeeded;
+    --main-text: 'Lora', 'Garamond', serif;
+    --main-header: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Every pages main section has this class which will hide any object that goes out of bond */
+.no-overflow{
+    overflow-x: hidden;
+}
+
+/* ---------------------------------CSS Styling section for header--------------------------------------*/
+
+/* Assign color, background color, padding, and width for the header*/
+.header{
+    padding: 0.5em 1rem;
+    width: 100%;
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    /*Position is fixed so header can be used anywhere on the page */
+    position: fixed;
+    top: 0;
+    /* Transition when header logo disappear after certion amount of scroll */
+    transition: 0.5s;
+    /* 99 z index so header is always on top*/
+    z-index: 99;
+}
+
+/* Styling for Star Wars logo section*/
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* Actual logo images widht and height*/
+#site-logo {
+    width: 120px;
+    height: 120px;
+}
+
+/* Navigation links styling */
+.nav-links ul {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0;
+}
+
+/* Remove the list styling which appear as line under words*/
+.nav-links li {
+    list-style: none;
+}
+
+/* Styling for navigation links anchor */
+.nav-links li a {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    /*Remove line under the text*/
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    transition: 0.5s;
+}
+
+/* Change anchor links color when user is hovering */
+.nav-links li a:hover {
+    color: var(--highlighter-color);
+}
+
+/* Change color and add line under links when pressed. Active class is dynamically added through Javacript */
+.nav-links li a.active{
+    color: var(--highlighter-color);
+    border-bottom: 3px solid var(--highlighter-color);
+}
+
+/* Scroll up button styling. Adapted version from https://www.youtube.com/watch?v=Vef9bxTilCU&ab_channel=DarkCode. 
+Changed styling like colors, width, position, and also made it so scroll up button only appears after certion amount of 
+scrolling. This is controlled dynamically through Javascript */
+.scroll-up{
+    position: fixed;
+    right: 0.5rem;
+    bottom: 1rem;
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+    color: var(--nav-color);
+    background-color: var(--hover-color);
+    text-decoration: none;
+    text-align: center; 
+    line-height: 50px;
+    display: none;
+}
+
+/* Styling for the hamburger menu*/
+.hamburger {
+    position: fixed;
+    font-size: 2rem;
+    right: 1rem;
+    top: 0.8rem;
+    color: var(--hover-color);
+    display: none;
+}
+
+/*-----------------------------------Navigation bar for mobile/small display users--------------------------------- */
+
+@media (max-width: 1100px) {
+
+    /*Show the hamburger menu if the display is smaller than 1100px */
+    .hamburger {
+        display: block;
+    }
+
+    /*Hide the the navigation links instead */
+    .nav-links {
+        display: none;
+    }
+
+    /* If the hamburger menu is clicked*/
+    .nav-links.active {
+        display: block;
+    }
+
+    /* Change links to show right side in column*/
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+    /* Hide the underline of active link*/
+    .nav-links li a.active{
+        color: var(--highlighter-color);
+        border: 0;
+    }
+
+}
+
+/*----------------------------- CSS styling for common elements for every page like background and section header---------- */
+
+/* Background stars image for every page*/
+.hero{
+    padding-top: 8rem;
+    /*Added background color for accessibility when asset image does not load*/
+    background-color: var(--nav-color);
+    background-image: url(asset/star-wars-background.jpg);
+}
+
+/* Styling for page header titles*/
+.section-header{
+    font-size: 1.5em;
+    margin: 0em 0em 2em 0rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: var(--highlighter-color);
+    text-align: center;
+    font-family: var(--main-header);
+    background-image: url(asset/death-star-banner.jpg);
+    text-align: left;
+    height: 100px;
+}
+
+/* Enlargen the headers font size*/
+.section-header h2{
+    font-size: 2em;
+}
+
+/* Divider line and text for contents*/
+.divider{
+    color: var(--highlighter-color);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Divider line styling*/
+.divider-line{
+    background-color: var(--hover-color);
+    position: relative;
+    width: 90%;
+    height: 1px;
+    margin-left: 5%;
+}
+
+/* For smaller display devices */
+@media (max-width: 1000px) {
+    .divider{
+        font-size: 2rem;
+    }
+    .section-header{
+        font-size: 1rem;
+    }
+}
+
+/*--------------------------------------CSS Styling for HOME PAGE------------------------------------------------------ */
+
+/* News container styling */
+.home-news{
+    display: grid;
+    /* Grid with 3 columns and repeated rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 670px;
+    grid-gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Styling for featured news*/
+.featured {
+    background-color: var(--background-color);
+    justify-content: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: var(--text-color);
+    font-family: var(--main-text);
+    font-size: 1.5rem;
+    /*Make it so featured news takes up 3 column on the grid */
+    grid-column: span 3;
+}
+
+
+/* Different color and larger font size for featured news header*/
+.featured h3{
+    text-align: center;
+    color: var(--highlighter-color);
+    font-size: 1.5em;
+}
+
+/* Styling for embeded youtube video*/
+#youtube-trailer {
+    width: 90%;
+    height: 70%;
+    margin-left: 5%;
+}
+
+/* Frequently asked question sections styling*/
+.faq{
+    background-color: var(--background-color);
+    margin-top: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Styling for the questions*/
+.faq .question{
+    background-color: var(--highlighter-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+/* Styling for the answers*/
+.faq .answer{
+    overflow: hidden;
+    /* Max height is 0 in other words answers are hidden by defualt*/
+    max-height: 0px;
+    color: var(--highlighter-color);
+    font-size: 2em;
+    /* Transition so when it goes from 0px to 500px it's not abrupt*/
+    transition: 1s;
+}
+
+/* If the user clicks on the question add this class through Javascript*/
+.faq.active .answer{
+    /*Show the answer if user clicked on it */
+    max-height: 500px;
+    padding: 1em;
+}
+
+/* Change background color of the question that is clicked */
+.faq.active .question{
+    background-color: var(--hover-color);
+}
+
+/* Styling for HOME PAGE on smaller screens*/
+
+/* On tablet and small screen pc*/
+@media (max-width: 1000px) {
+    /*News container when display is smaller */
+    /*Make it so there is only news in a row */
+    .home-news {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 670px;
+    }
+    /*Featured news is not bigger than other news*/
+    .featured{
+        grid-column: span 1;
+        font-size: 1.25rem;
+    }
+    /* Decrease the font size of faq and divider so its readable*/
+    .faq {
+        font-size: small;
+    }
+}
+
+/* On mobile devices*/
+
+@media (max-width: 600px) {
+    .home-news{
+        grid-auto-rows: 500px;
+    }
+    .featured{
+        font-size: 0.9rem;
+    }
+    #youtube-trailer{
+        height: 50%;
+    }
+    .faq{
+        font-size: x-small;
+    }
+}
+
+/*---------------------------------------------CSS Styling for NEWS PAGE---------------------------------------------- */
+
+/* Styling for section that contains every news */
+.news-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 670px;
+    grid-gap: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* Styling for individual news sections */
+.news{
+    background-color: var(--background-color);
+    justify-content: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    color: var(--text-color);
+    font-family: var(--main-text);
+    font-size: 1rem;
+}
+
+/* Styling for the news image*/
+.news img{
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    object-fit: fill;
+}
+
+/* Increase the size of the image when hovered*/
+.news img:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for the article titles*/
+.news h3{
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: var(--main-header);
+    color: var(--highlighter-color);
+    padding-left: 0.2rem;
+}
+
+/* Styling for the article body*/
+.news p{
+    padding: 1em;
+}
+
+/* Styling for the articles author and date */
+.news .news-author{
+    color: var(--hover-color);
+    width: 100%;
+    margin-bottom: 0.5rem;
+}   
+
+/* Styling for hyperlinks anchors to look like a button */
+.news a{
+    display: inline;
+    border: 2px solid var(--highlighter-color);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: var(--highlighter-color);
+    font-weight: bolder;
+}
+
+/* Change background color and border color to indicate user is hovering over the anchor*/
+.news a:hover{
+    background-color: var(--hover-color);
+    border: var(--hover-color);
+}
+
+/* Make main featured news take two span of space on the grid and increase the font size*/
+.news.main{
+    grid-column: span 2;
+    grid-row: span 2;
+    font-size: 1.7rem;
+}
+
+/* Styling for NEWS page for smaller devices  */
+
+/* For tablets and smaller display pc */
+@media (max-width: 1000px) {
+
+    /*News container shows only one news per row and smaller rows*/
+    .news-container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 600px;
+    }
+    /* Main news is not bigger than others*/
+    .news.main{
+        grid-row: span 1;
+        grid-column: span 1;
+        font-size: 0.9rem;
+    }
+    /* Smaller text for */
+}
+/* For mobile devices*/
+@media (max-width: 600px) {
+    /* Smaller text on the news*/
+    .news.main{
+        font-size: 0.8rem;
+    }
+    .news {
+        font-size: 0.9rem;
+    }
+    .news img{
+        height: 40%;
+    }
+    .news a{
+        font-size: 0.7rem;
+    }
+}
+
+/*----------------------------------------------------CSS Styling for Movies Page---------------------------------*/
+
+/* Styling for every movies container*/
+.movies {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 400px;
+    padding: 4em;
+    gap: 2em;
+}
+
+/* Individual movie containers styling */
+.movie-banner {
+    border: 2px solid var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Styling for the movie details */
+.movies .movie-banner .detail{
+    font-family: var(--main-text);
+    color: var(--text-color);
+    font-size: 1.3em;
+    padding-bottom: 2em;
+}
+
+/* Make the movie title centered and bigger */
+.movies .movie-banner .detail .title{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Styling for the movie poster on left side*/
+.movies .left-banner img{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+/* Styling for the movie poster on right side*/
+.movies .right-banner img{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+
+/* Styling for movie hyperlinks anchor. Makes it look like button*/
+.movies .movie-banner a{
+    display: inline;
+    border: 2px solid var(--highlighter-color);
+    border-radius: 20px;
+    padding: 1em;
+    margin: 0.5em;
+    text-decoration: none;
+    color: var(--highlighter-color);
+    font-weight: bolder;
+}
+
+/* Increase the size and change the color when anchor is hovered */
+.movies .movie-banner a:hover{
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    font-size: 1.2em;
+}
+
+/* Styling for MOVIES page for smaller devices  */
+
+/* For tablets and smaller pcs*/
+@media (max-width: 1000px) {
+    .movies .movie-banner img{
+        width: 100%;
+        height: 50%;
+        float: inline-start;
+    }
+    .movies {
+        font-size: 0.9rem;
+    }
+}
+/* For mobile devices*/
+@media (max-width: 500px) {
+    .movies {
+        font-size: 0.7rem;
+    }
+}
+/*---------------------------------------------------CSS Styling for HISTORY page----------------------------------- */
+
+/* Styling for the main container that includes every banner and date */
+.timeline-container {
+    display: grid;
+    color: black;
+    padding: 2.5em;
+    grid-template-columns: 1fr 0.18rem 1fr;
+}
+
+/* Styling for the information card*/
+.card.info{
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 0.5em;
+    margin: 0 2.5em 2.5em 2.5em;
+
+    font-family: var(--main-text);
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    /* Dont show the card until show class is assigned through Javascript*/
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    /* Place the card to right of where it should be shown to create slide in animation*/
+    transform: translateX(50%);
+}
+
+/* Styling for the information card that will on the right*/
+.card.right{
+    color: var(--highlighter-color);
+    font-size: 2em;
+    height: 50px;
+    padding-top: 25px;
+    text-align: right;
+    margin: 0 0.5em 2.5em 0;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+/* Styling for the information card that will show on the left*/
+.card.left{
+    color: var(--highlighter-color);
+    font-size: 2em;
+    height: 50px;
+    padding-top: 25px;
+    text-align: left;
+    margin: 0 0 2.5em 0.5em;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+/* When show class is assigned display the card and move it to where it supposed to be
+   This dynamic display of cards have been adapted from https://www.youtube.com/watch?v=2IbRtjez6ag&ab_channel=WebDevSimplified
+   Core idea of the video is still in my video but I adapted it with transform: translateX to add slide in effect from side
+   also added root margin to intersection observer so the slide in animation will be shown.
+*/
+.card.show {
+    transition: 0.4s ease-in;
+    /* Move the card to original space to create slide in animation */
+    transform: translateX(0);
+    /* Display the card*/
+    opacity: 1;
+}
+
+/* Styling for the vertical timeline*/
+.ruler{
+    position: relative;
+    background: beige;
+}
+
+/* Styling for the cirlce that indicates date and information on the timeline*/
+.ruler-circle {
+    position: absolute;
+    top: 0;
+    background: var(--highlighter-color);
+    /*Center the timeline point on the vertical ruler*/
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1rem;
+    height: 1rem;
+
+    border-radius: 50%;
+}
+
+/* Styling for HISTORY page for smaller devices  */
+
+/* For tablets and smaller pcs*/
+@media (max-width: 1000px) {
+    .timeline-container {
+        font-size: 0.8rem;
+    }
+} 
+/* For mobile devices*/
+@media (max-width: 500px) {
+    .timeline-container {
+        font-size: 0.6rem;
+        padding: 0.8em;
+    }
+}   
+/*-------------------------------------------------------CSS Styling for CONTACTS page------------------------------------ */
+
+/*Styling for the container that engulfes every content on the page */
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 400px;
+}
+
+/* Styling for the contacts list that includes address, phone, and email*/
+.contacts-list {
+    color: var(--highlighter-color);
+    background-color: var(--background-color);
+    margin: 2em;
+    text-decoration: none;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1em;
+    height: 400px;
+}
+
+/* Styling for the section subheaders */
+.contacts-list h3{
+    font-family: var(--main-header);
+    font-size: 2em;
+
+/* Remove decorations like underline from the lists */
+}
+.contacts-list li {
+    list-style-type: none;
+    padding: 20px
+}
+
+/* Styling for the individual list items header */
+.contacts-list h4{
+    font-family: var(--main-header);
+    font-size: 2em;
+}
+
+/* Styling for the email message section*/
+.contacts-email {
+    color: var(--highlighter-color);
+    background-color: var(--background-color);
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 2em;
+}
+
+/* Styling for the email message section header*/
+.contacts-email h3{
+    font-family: var(--main-header);
+    font-size: 3em;
+    text-align: center;
+}
+
+/* Styling for message sections input fields*/
+.contacts-email input{
+    width: 90%;
+    height: 3em;
+    margin-left: 2em;
+    margin-bottom: 2em;
+    margin-right: 2em;
+}
+
+/* Styling for the message area*/
+.contacts-email textarea{
+    width: 90%;
+    height: 400px;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+/* Styling for submit button to send the message*/
+.contacts-email button{
+    width: 8em;
+    height: 4em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    background-color: var(--highlighter-color);
+    border-radius: 1em;
+    font-size: 1em;
+}
+
+/* Increase the size and change color when the button is hovered*/
+.contacts-email button:hover{
+    background-color: var(--hover-color);
+    transform: scale(1.1);
+}
+
+/* Styling for CONTACTS page for smaller devices  */
+
+/* For tablets and smaller pcs*/
+@media (max-width: 1000px) {
+    .contact-container{
+        font-size: 0.8rem;
+        grid-template-columns: 1fr;
+    }  
+    .contacts-list h4 {
+        font-size: 3em;
+    }
+}
+/* For mobile devices */
+@media (max-width: 500px) {
+    .contact-container{
+        font-size: 0.6rem;
+    }
+    .contacts-email input {
+        width: 80%;
+    }
+    .contacts-email textarea{
+        width: 80%;
+    }  
+}
+/*---------------------------------CSS Styling for FOOTER thats common for every page----------------------------------*/
+
+/* Styling for the container that includes everything in the footer*/
+footer {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Remove the list like decorations*/
+footer li {
+    list-style-type: none;
+}
+
+/* Styling for the contents*/
+.footer-items{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em;
+    justify-content: space-between;
+}
+
+/* Styling for the left side of the footer which includes title, site description, date, and address*/
+.footer-items .left{
+    text-align: left;
+    margin-left: 3em;
+    font-size: 1em;
+    font-family: var(--main-header);
+}
+
+/* Styling to the left side header*/
+.footer-items .left h4{
+    font-size: 4em;
+    font-family: var(--main-header);
+}
+
+/* Styling for the right side of the footer that includes social media links */
+footer nav {
+    display: flex;
+    justify-content:right;
+    width: 100%;
+}
+
+/* Styling for social media links anchor*/
+#socialMediaLinks li a {
+    margin-right: 4em;
+    margin-bottom: 0.5em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--highlighter-color);
+}
+
+/* Change the color of social media logos when hovered*/
+#socialMediaLinks li :hover{
+    background-color: var(--hover-color);
+}
+
+/* Styling for the social media logos svg*/
+#socialMediaLinks svg {
+    fill: var(--background-color);
+    width: 25px;
+    height: 25px;  
+}
+
+/* Styling for FOOTER thas common for all pages for smaller devices  */
+
+/* For tablets and smaller pcs*/
+@media (max-width: 1000px) {
+    footer {
+        font-size: 0.8em;
+    }
+} 
+
+/* For mobile devices*/
+@media (max-width: 500px) {
+    footer {
+        font-size: 0.6em;
+    }
+}
