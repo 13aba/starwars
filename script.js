@@ -17,15 +17,6 @@ document.addEventListener('scroll', (event) =>{
     }
 })
 
-/* Variable for current websites path name */
-const activePage = window.location.pathname;
-/* Add active class to html element for the current website for styling */
-const navLinks = document.querySelectorAll('.nav-links a').forEach(link => {
-    if(link.href.includes(activePage)){
-        link.classList.add('active');
-    }
-})
-
 /*------------------------------------------------FOR SCROLL UP BUTTON---------------------------------------- */
 
 /*   */
