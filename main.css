@@ -92,7 +92,7 @@
     border-bottom: 3px solid var(--highlighter-color);
 }
 
-/* Scroll up button styling. Adapted version from https://www.youtube.com/watch?v=Vef9bxTilCU&ab_channel=DarkCode. 
+/* Scroll up button styling. Adapted version from https://www.youtube.com/watch?v=FK5DEa1Hvco&ab_channel=dcode 
 Changed styling like colors, width, position, and also made it so scroll up button only appears after certion amount of 
 scrolling. This is controlled dynamically through Javascript */
 .scroll-up{
@@ -110,6 +110,8 @@ scrolling. This is controlled dynamically through Javascript */
     display: none;
 }
 
+/* Adapted version from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp . Changed the styling so navigation 
+links appear right side not at the bottom. Also changed color and other positioning styles the fit my website*/
 /* Styling for the hamburger menu*/
 .hamburger {
     position: fixed;

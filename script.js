@@ -19,7 +19,8 @@ document.addEventListener('scroll', (event) =>{
 
 /*------------------------------------------------FOR SCROLL UP BUTTON---------------------------------------- */
 
-/*   */
+/* Adapted version from https://www.youtube.com/watch?v=FK5DEa1Hvco&ab_channel=dcode. My improved version shows the scroll 
+up button only after certion amount of scrolling.  */
 /* Select scroll up button */
 const scrollUpButton = document.querySelector('.scroll-up');
 document.addEventListener('scroll', (event) =>{
@@ -42,6 +43,8 @@ scrollUpButton.addEventListener('click', () => {
 
 /*--------------------------------------------FOR HAMBURGER MENU------------------------------------ */
 
+/* Adapted version from https://www.w3schools.com/howto/howto_js_mobile_navbar.asp . Changed the styling so navigation 
+links appear right side not at the bottom. Also changed color and other positioning styles the fit my website*/
 /* DOM select the hamburger and navigation list elements*/
 const burger = document.querySelector(".hamburger");
 const navlist = document.querySelector(".nav-links");
