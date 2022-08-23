@@ -1,20 +1,42 @@
+/* Centre the content and largen the font size */
 body {
     margin-left: 20%;
     margin-right: 20%;
     font-size: 1.2em;
 }
 
+/* Center the headers*/
 h2 {
     text-align: center;
 }
 
+/* Add gap between lists*/
 li {
     margin-bottom: 0.6em;
 }
 
-#structure-image{
-    width: 80%;
+/* Make sure images are fit in the containers*/
+.image-container img{
+    width: 100%;
 }
+
+/* Gallery for wireframes*/
+.wireframe-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Individual container styling*/
+.wireframe-gallery .container {
+    text-align: center;
+}
+
+/*Fit the image to container */
+.wireframe-gallery .container img{
+    width: 100%;
+}
+
 
 
 
